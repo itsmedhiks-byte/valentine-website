@@ -1,59 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Valentine's Day</title>
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #ff9a9e, #fad0c4);
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-.container {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-h1 {
-  color: #e91e63;
-}
-
-button {
-  padding: 10px 20px;
-  background: #e91e63;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #c2185b;
-}
-
-#message {
-  margin-top: 20px;
-  color: #444;
-  font-size: 18px;
-}
-</style>
+  <title>Valentine Special</title>
 </head>
 
 <body>
 
 <div class="container">
   <h1>❤️ Happy Valentine's Day ❤️</h1>
+
   <input type="text" id="name" placeholder="Enter your love name"><br><br>
+
   <button onclick="showMessage()">Open My Heart</button>
+  <br><br>
+
+  <!-- Music Buttons -->
+  <button onclick="playMusic()">🎵 Play Music</button>
+  <button onclick="pauseMusic()">⏸ Pause</button>
+
   <div id="message"></div>
 </div>
+
+<!-- Audio File -->
+<audio id="bgMusic" src="love.mp3" loop></audio>
 
 <script>
 function showMessage() {
@@ -61,23 +30,15 @@ function showMessage() {
   document.getElementById("message").innerHTML =
     "Dear " + name + ", You are my today and all of my tomorrows 💕";
 }
-</script>
-<body>
 
-<div class="container">
-  <!-- Your existing content -->
-</div>
-
-<audio id="bgMusic" src="love.mp3" loop></audio>
-
-<script>
-document.body.addEventListener("click", function() {
+function playMusic() {
   document.getElementById("bgMusic").play();
-}, { once: true });
-</script>
+}
 
-</body>  
+function pauseMusic() {
+  document.getElementById("bgMusic").pause();
+}
+</script>
 
 </body>
 </html>
-
