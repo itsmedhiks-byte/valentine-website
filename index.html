@@ -62,6 +62,22 @@ function showMessage() {
     "Dear " + name + ", You are my today and all of my tomorrows 💕";
 }
 </script>
+<body>
+
+<div class="container">
+  <!-- Your existing content -->
+</div>
+
+<audio id="bgMusic" src="love.mp3" loop></audio>
+
+<script>
+document.body.addEventListener("click", function() {
+  document.getElementById("bgMusic").play();
+}, { once: true });
+</script>
+
+</body>  
 
 </body>
 </html>
+
